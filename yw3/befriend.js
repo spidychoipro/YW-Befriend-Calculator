@@ -824,7 +824,7 @@ function setProbabilities(dict) {
 		result.append(h);
 	}
 	let h = document.createElement("li");
-	h.innerHTML = `No Yokai: ${(100 - sum).toFixed(2)}%`;
+	h.innerHTML = `No Yo-kai: ${(100 - sum).toFixed(2)}%`;
 	result.append(h);
 
 

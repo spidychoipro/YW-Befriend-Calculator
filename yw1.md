@@ -33,11 +33,11 @@ After calculating the base chance, the bonuses the player can influence are adde
 | 7          | 1%          | 2%          | 3%          | 4%          | 1%         | -0.18%       |
 | 8          | 1%          | 1%          | 2%          | 3%          | 1%         | -0.08%       |
 
-If the given food was the Yo-Kai's favorite food the value gets multiplied by 1.5. If it was the Yo-Kai's hated food it gets multiplied by 0.4.
+If the given food was the Yo-kai's favorite food the value gets multiplied by 1.5. If it was the Yo-kai's hated food it gets multiplied by 0.4.
 For example, if you gave a tier 4 favorite food at difficulty 1 the bonus will be 37.5% instead of 25%.
 
 #### Wisps
-A blue wisp with one heart gives a 10% bonus, a golden wisp with three hearts guarantees this Yo-Kai to get selected.
+A blue wisp with one heart gives a 10% bonus, a golden wisp with three hearts guarantees this Yo-kai to get selected.
 
 ## Modding Opportunities
 The befriend bonuses are all stored in the chara param file:

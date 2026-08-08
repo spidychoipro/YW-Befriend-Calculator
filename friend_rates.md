@@ -1,4 +1,4 @@
-| Name                 | Yo-Kai Watch 1 | Yo-Kai Watch 2 | Yo-Kai Watch 3 |
+| Name                 | Yo-kai Watch 1 | Yo-kai Watch 2 | Yo-kai Watch 3 |
 | -------------------- | -------------- | -------------- | -------------- |
 | Slacka-slash         | 0x55556714     | 0x00765555     | 0x00876666     |
 | Molar Petite         | -              | 0x00887765     | 0x00876665     |

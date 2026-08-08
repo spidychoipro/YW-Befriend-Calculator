@@ -1,8 +1,5 @@
 Access: https://swopis.github.io/YW-Befriend-Calculator/yw3/
 
-> [!CAUTION]
-> This section is not finished. It may contain errors or miss information.
-
 ## How Does Befriending Work (Normal Battles)?
 Make sure to first read how to [Calculate the Difficulty](README.md#calculating-the-difficulty).  
 The resulting number will be referenced as `difficulty`
@@ -17,7 +14,7 @@ For example, if the difficulty is `2` the base probability is $1:2^{3}$ or $1:8$
 ### Player-Influenced Bonuses
 After calculating the base chance, the bonuses the player can influence are _added_:
 * food bonus
-* Yo-Kai blaster bonus
+* Yo-kai blaster bonus
 * superstar soul/popularity skill
 * unpopularity skill
 * wisp bonus
@@ -39,26 +36,27 @@ After calculating the base chance, the bonuses the player can influence are _add
 | 8          | 1%          | 2%          | 3%          | 4%          |
 | 9          | 1%          | 1%          | 2%          | 3%          |
 
-If the given food was the Yo-Kai's favorite food the value gets multiplied by 1.5. If it was the Yo-Kai's hated food it gets multiplied by 0.4.
+If the given food was the Yo-kai's favorite food the value gets multiplied by 1.5. If it was the Yo-kai's hated food it gets multiplied by 0.4.
 For example, if you gave a tier 4 favorite food at difficulty 1 the bonus will be 37.5% instead of 25%.
 
-The forbidden fruit guarantees this Yo-Kai to get selected.
+The forbidden fruit guarantees this Yo-kai to get selected.
 
-#### Yo-Kai Blaster
-If the Yo-Kai blaster was set to befriend mode, a bonus depending on how "full" the Yo-Kai was shot and a factor. This factor depends on the `difficulty`.
+#### Yo-kai Blaster
+If the Yo-kai blaster was set to befriend mode, a bonus for each percent the meter is filled is added. This bonus depends on the `difficulty`.
 
-| Difficulty | Factor       |
-|------------|--------------|
-| 2          | 0.35         |
-| 3          | 0.20         |
-| 4          | 0.15         |
-| 5          | 0.10         |
-| 6          | 0.07         |
-| 7          | 0.05         |
-| 8          | 0.04         |
-| 9          | 0.03         |
+| Difficulty | Bonus per %  | Max Bonus (100% meter) |
+|------------|--------------|------------------------|
+| 2          | 0.35%        | 35%                    |
+| 3          | 0.20%        | 20%                    |
+| 4          | 0.15%        | 15%                    |
+| 5          | 0.10%        | 10%                    |
+| 6          | 0.07%        | 7%                     |
+| 7          | 0.05%        | 5%                     |
+| 8          | 0.04%        | 4%                     |
+| 9          | 0.03%        | 3%                     |
 
-For example, a difficulty 9 Yo-Kai with max blaster level will get a $100 * 0.03 = 3\\%$ bonus.
+> [!NOTE]
+> If the blaster is on a HIGH spot the bonus is not higher. It only fills up the meter faster.
 
 #### Skills / Souls
 | Difficulty | popularity / superstar soul | unpopularity |
@@ -85,11 +83,11 @@ For example, a difficulty 9 Yo-Kai with max blaster level will get a $100 * 0.03
 | 9          | 1%        | 4.5%        |
 
 > [!WARNING]
-> Contrary to Yo-Kai Watch 1 and 2, the golden wisp with 3 hearts no longer guarantees a befriend.
+> Contrary to Yo-kai Watch 1 and 2, the golden wisp with 3 hearts no longer guarantees a befriend.
 
 #### What is the shrine bonus?
 Sometimes after you have put your 1$ into the shrine in Mt. Wildwood, you get the message: "I have a feeling that I've got a lot more friends now.".
-After this message every Yo-Kai has a 1% higher chance of approaching you after a battle for one day.
+After this message every Yo-kai has a 1% higher chance of approaching you after a battle for one day.
 
 #### Auras
 There are 3 different aura tiers.
@@ -116,10 +114,10 @@ Then the bonus depends on aura tier and difficulty.
 | 8          | 2%          | 3%          | 4%          |
 | 9          | 1%          | 2%          | 3%          |
 
-If the aura Enma or Enma EX is active and the enemy Yo-Kai has the tribe Enma, the Yo-Kai will always get selected.
+If the aura Enma or Enma EX is active and the enemy Yo-kai has the tribe Enma, the Yo-kai will always get selected. (Aura bonus gets multiplied by battle var `0x344D0364` [default: 1000])
 
 ## How Does Befriending Work (Blasters T)?
-In Blasters T, the [difficulty](README.md#calculating-the-difficulty) for having zero Yo-Kai befriended will always be used.
+In Blasters T, the [difficulty](README.md#calculating-the-difficulty) for having zero Yo-kai befriended will always be used.
 
 Like normal battles the Base Probability can be calculated using the formula:
 
@@ -133,7 +131,7 @@ Bonuses can be achieved in the following ways:
 * Auras
 
 ### Fragrances
-By using fragrances on the enemy Yo-Kai the following boosts can be achieved:
+By using fragrances on the enemy Yo-kai the following boosts can be achieved:
 
 | Difficulty | Charm Fragrance | Allure Fragrance | Enthrall Fragrance |
 |------------|-----------------|------------------|--------------------|
@@ -172,6 +170,26 @@ Multiple fragrances cannot stack. The first applied fragrance counts.
 | 8          | 1%        | 2%                        |
 | 9          | 1%        | 1%                        |
 
+
+### Random Event Befriends
+Some Yo-kai are given to the player in an event and not like most Yo-kai with "[Yo-kai] approaches you". Some of these befriends are also randomly decided.  
+This system however works differently than the one explained above. The befriend chance is hardcoded into a [CExpression](https://github.com/n123git/yw-cond/)
+and cannot be boosted.
+The probabilities are:  
+
+| Yo-kai         | Probability |
+|----------------|-------------|
+| Tomnyan        | 8.5%        |
+| Koma Knomads   | 8.5%        |
+| D-Stroy        | 8.5%        |
+| Unbearaboy!    | 8.5%        |
+| Rgt. Zazel     | 10%         |
+| Ancient Enma   | 10%         |
+| Hinozall Awk.  | 10%         |
+| Lord Enma Awk. | 10%         |
+| Solar Enma     | 10%         |
+| Infinite Enma  | 10%         |
+| Umbral Enma    | 10%         |
 
 
 ## Modding Opportunities
