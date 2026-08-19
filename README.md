@@ -1,8 +1,9 @@
-# Yo-kai Watch Befriend Rate Calculators
-Access: https://swopis.github.io/YW-Befriend-Calculator/
+# 요괴워치 동료 확률 계산기 (Yo-kai Watch Befriend Rate Calculator)
+
+한국어 이름 지원 버전 | [English Version](https://swopis.github.io/YW-Befriend-Calculator/)
 
 > [!NOTE]
-> This guide only covers befriends that happen after a battle with "Yo-kai is approaching you" and Blasters T in Yo-kai Watch 3.
+> 이 가이드는 요괴워치 1, 2, 3에서 "요괴가 다가옵니다" 전투 후 및 버스터즈 T에서의 동료 획득만 다룹니다.
 
 ## Calculating the Difficulty
 In Yo-kai Watch 1, 2 and 3 each Yo-kai gets assigned a 4-byte-descriptor that determines it's befriend rates.  

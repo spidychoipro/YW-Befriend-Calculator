@@ -24,7 +24,6 @@ let ykData = {
 "Spenp": [ 1, 3, 4, 5, 5, 6 ],
 "Snartle": [ 8, 8, 8, 8, 8, 8 ],
 "Moskevil": [ 4, 5, 5, 5, 6, 7 ],
-"Snartle": [ 8, 8, 8, 8, 8, 8 ],
 "Hidabat": [ 2, 4, 4, 5, 5, 6 ],
 "Skreek": [ 5, 5, 5, 6, 6, 7 ],
 "Pandanoko": [ 4, 5, 6, 6, 7, 7 ],
@@ -75,7 +74,6 @@ let ykData = {
 "Scritchy": [ 5, 5, 5, 6, 7, 8 ],
 "Zerberker": [ 7, 7, 7, 7, 8, 8 ],
 "Sandi": [ 6, 7, 7, 7, 7, 8 ],
-"Snartle": [ 8, 8, 8, 8, 8, 8 ],
 "Negatibuzz": [ 1, 3, 4, 5, 5, 6 ],
 "Tengu": [ 6, 6, 6, 7, 7, 8 ],
 "Beetler": [ 4, 4, 4, 5, 6, 7 ],
@@ -134,7 +132,6 @@ let ykData = {
 "Grubsnitch": [ 2, 4, 5, 6, 6, 7 ],
 "Slush": [ 2, 4, 4, 5, 6, 6 ],
 "Greesel": [ 6, 6, 6, 7, 7, 8 ],
-"Snartle": [ 8, 8, 8, 8, 8, 8 ],
 "Pandle": [ 1, 3, 3, 4, 5, 6 ],
 "Croonger": [ 3, 4, 5, 6, 6, 7 ],
 "Cadin": [ 2, 3, 4, 5, 5, 6 ],
@@ -151,7 +148,6 @@ let ykData = {
 "Armsman": [ 5, 6, 6, 6, 7, 8 ],
 "Lava Lord": [ 4, 4, 4, 5, 6, 7 ],
 "Multimutt": [ 4, 4, 5, 5, 6, 7 ],
-"Snartle": [ 8, 8, 8, 8, 8, 8 ],
 "Casanuva": [ 5, 5, 6, 6, 7, 7 ],
 "Wazzat": [ 1, 3, 3, 4, 5, 6 ],
 "Dazzabel": [ 2, 4, 4, 4, 5, 6 ],
@@ -204,7 +200,6 @@ let ykData = {
 "Cynake": [ 4, 5, 5, 5, 6, 7 ],
 "Walkappa": [ 4, 5, 5, 6, 6, 7 ],
 "Beelzebold": [ 5, 5, 5, 6, 7, 8 ],
-"Grainpa": [ 5, 5, 6, 6, 6, 7 ],
 "Castelius Max": [ 7, 7, 7, 7, 7, 8 ],
 "Urnaconda": [ 4, 4, 5, 6, 7, 7 ],
 "Happierre": [ 3, 4, 5, 5, 6, 7 ],
@@ -224,16 +219,296 @@ let ykData = {
 "Skelebella": [ 5, 5, 6, 6, 6, 7 ],
 };
 
+let ykNamesKo = {
+"Bananose": "바나노즈",
+"Peppillon": "페필론",
+"Mynimo": "마이니모",
+"Rollen": "롤렌",
+"Rageon": "라제온",
+"Castelius II": "카스테리우스 II",
+"Sapphinyan": "사피니냥",
+"Blizzaria": "블리자리아",
+"Komajiro": "코마지로",
+"Badude": "바두데",
+"Reuknight": "루나이트",
+"Corptain": "콥테인",
+"Sir Berus": "베루스 경",
+"Alloo": "알루",
+"Dianyan": "다이아냥",
+"Eterna": "에테르나",
+"Dragon Lord": "드래곤 로드",
+"Awevil": "오빌",
+"Ol' Saint Trick": "산타 할아버지",
+"Heheheel": "헤헤힐",
+"Wiglin": "위글린",
+"Reversette": "리버세트",
+"Spenp": "스펜프",
+"Snartle": "스나르틀",
+"Moskevil": "모스케빌",
+"Hidabat": "히다뱃",
+"Skreek": "스크리크",
+"Pandanoko": "판다노코",
+"Buhu": "부우",
+"Swosh": "스워시",
+"Castelius I": "카스테리우스 I",
+"Dismarelda": "디스마렐다",
+"Damona": "다모나",
+"Agon": "아곤",
+"Noway": "나우웨이",
+"Kapunki": "카뿡키",
+"Daiz": "다이즈",
+"Shmoopie": "슈무피",
+"Signibble": "시그니블",
+"Timidevil": "티미데빌",
+"Dubbles": "더블스",
+"Cutta-nah": "컷타나",
+"Blazion": "블레이즌",
+"Goruma": "고루마",
+"Cadable": "카더블",
+"Mama Aura": "마마 아우라",
+"Gleam": "글림",
+"Ol' Fortune": "포춘 할아버지",
+"Leadoni": "레도니",
+"Rockabelly": "로카벨리",
+"Robonyan": "로보냥",
+"Everfore": "에버포레",
+"Wantston": "원트스톤",
+"Reversa": "리버사",
+"Cheeksqueek": "치크스퀴크",
+"Shrook": "슈룩",
+"Komane": "코마네",
+"Emenyan": "에메니냥",
+"Tantroni": "탄트로니",
+"Q'wit": "큐윗",
+"Siro": "시로",
+"Appak": "아팍",
+"Hungramps": "허그램프스",
+"Thornyan": "쏜냥",
+"Minochi": "미노치",
+"Benkei": "벤케이",
+"Mircle": "미르클",
+"Rhinoggin": "라이노긴",
+"Topanyan": "토파냥",
+"Dulluma": "둘루마",
+"Blips": "블립스",
+"Chilhuahua": "칠와와",
+"Scritchy": "스크리치",
+"Zerberker": "제르버커",
+"Sandi": "산디",
+"Negatibuzz": "네가티붕",
+"Tengu": "텐구",
+"Beetler": "비틀러",
+"Komiger": "코미거",
+"Pupsicle": "펍시클",
+"Impass": "임패스",
+"Chippa": "치파",
+"Casanono": "카사노노",
+"Grainpa": "그레인파",
+"Pookivil": "푸키빌",
+"Negasus": "네이거스",
+"Whapir": "와피르",
+"Draggie": "드래기",
+"Komasan": "코마상",
+"Goldenyan": "골디냥",
+"Nird": "니르드",
+"Ake": "아케",
+"N'more": "느모르",
+"Cutta-nah-nah": "컷타나나",
+"Duchoo": "두추",
+"Kyubi": "큐비",
+"Rhyth": "리스",
+"Droplette": "드로플레트",
+"Hurchin": "허친",
+"Sheen": "신",
+"Tanbo": "탄보",
+"Mochismo": "모치스모",
+"D'wanna": "드وان나",
+"Signiton": "시그니톤",
+"Tattletell": "탤런테일",
+"Dimmy": "딤미",
+"Gush": "구시",
+"Cupistol": "컵피스톨",
+"Belfree": "벨프리",
+"Mad Mountain": "매드 마운틴",
+"Tattlecast": "탤런캐스트",
+"Walldin": "왈딘",
+"Castelius III": "카스테리우스 III",
+"Baddinyan": "배드니냥",
+"Tengloom": "텐글룸",
+"Suspicioni": "스피시오니",
+"Contrarioni": "콘트라리오니",
+"Sushiyama": "스시야마",
+"Frostail": "프로스트테일",
+"Rubinyan": "루비냥",
+"Chansin": "찬신",
+"Fidgephant": "피지펀트",
+"Enefly": "エネ플라이",
+"Blandon": "블랜던",
+"Helmsman": "헬스맨",
+"Beetall": "비탈",
+"Illoo": "일루",
+"Enerfly": "에너플라이",
+"Drizzle": "드리즐",
+"Dromp": "드롬프",
+"Grubsnitch": "그럽스니치",
+"Slush": "슬러시",
+"Greesel": "그리젤",
+"Pandle": "팬들",
+"Croonger": "크룽거",
+"Cadin": "카딘",
+"Confuze": "컨퓨즈",
+"Hungorge": "헝고르지",
+"Pinkipoo": "핑키푸",
+"Auntie Heart": "어니 하트",
+"Dummkap": "둠크밥",
+"Fishpicable": "피셔피클",
+"Venoct": "베노クト",
+"Cruncha": "크룽처",
+"Tunatic": "튜나틱",
+"Quaken": "쿠아켄",
+"Armsman": "암스맨",
+"Lava Lord": "라바 로드",
+"Multimutt": "멀티머트",
+"Casanuva": "카사누바",
+"Wazzat": "와잣",
+"Dazzabel": "다자벨",
+"Hornaplenty": "호나플렌티",
+"Flengu": "플렝구",
+"Lafalotta": "라팔로타",
+"Betterfly": "베터플라이",
+"Bruff": "브러프",
+"Alhail": "알헤일",
+"Abodabat": "아보다뱃",
+"Undy": "언디",
+"Compunzer": "컴푼저",
+"Singcada": "싱카다",
+"Roughraff": "러그라프",
+"Lodo": "로도",
+"Count Cavity": "카운트 캐비티",
+"Noko": "노코",
+"Statiking": "스태티킹",
+"Snee": "스니",
+"Grumples": "그럼플스",
+"Shad. Venoct": "섀도우 베노クト",
+"Elloo": "엘루",
+"Papa Bolt": "파파 볼트",
+"Payn": "페인",
+"Copperled": "코퍼레드",
+"Jibanyan": "지바냥",
+"Chummer": "처머",
+"Manjimutt": "만지머트",
+"Touphant": "투팡트",
+"Uncle Infinite": "인피닛 삼촌",
+"Swelterrier": "스벨테리어",
+"Steppa": "스테파",
+"Insomni": "인솜니",
+"Mirapo": "미라포",
+"Peckpocket": "펙포켓",
+"Slitheref": "슬리스레프",
+"Supyo": "수피요",
+"Almi": "알미",
+"Neighfarious": "네이페어리어스",
+"Coughkoff": "코프코프",
+"Chatalie": "채털리",
+"Nul": "눌",
+"Espy": "에스피",
+"B3-NK1": "B3-NK1",
+"Darumacho": "다루마초",
+"Azure Dragon": "아주르 드래곤",
+"Babblong": "바블롱",
+"Cuttincheez": "컷틴치즈",
+"Infour": "인포",
+"Cynake": "시네이크",
+"Walkappa": "왈카파",
+"Beelzebold": "벨제볼트",
+"Castelius Max": "카스테리우스 맥스",
+"Urnaconda": "우르나콘다",
+"Happierre": "해피에르",
+"Slacka-slash": "슬라카슬래시",
+"Nagatha": "나가타",
+"Rattelle": "라텔",
+"Flumpy": "플럼피",
+"Blowkade": "블로케이드",
+"Skranny": "스크래니",
+"Snotsolong": "스넛소롱",
+"Baku": "바쿠",
+"Lamedian": "라메디안",
+"Bloominoko": "블루미노코",
+"Rhinormous": "라이노러머스",
+"Ledballoon": "레드발룬",
+"Frostina": "프로스티나",
+"Skelebella": "스켈레벨라",
+};
+
 let dataList = document.createElement("datalist");
 dataList.id = "yks";
 
 for (let yk in ykData) {
 	let option = document.createElement("option");
 	option.value = yk;
+	option.text = yk;
 	dataList.append(option);
+	
+	let koOption = document.createElement("option");
+	koOption.value = ykNamesKo[yk] || yk;
+	koOption.text = ykNamesKo[yk] || yk;
+	dataList.append(koOption);
 }
 
 document.body.append(dataList);
+
+let languageToggle = document.createElement("button");
+languageToggle.textContent = "한국어";
+languageToggle.onclick = function() {
+	this.textContent = this.textContent === "한국어" ? "English" : "한국어";
+	updateLanguage();
+};
+document.body.insertBefore(languageToggle, document.getElementById("data"));
+
+let currentLanguage = "en";
+
+function updateLanguage() {
+	currentLanguage = currentLanguage === "en" ? "ko" : "en";
+	
+	document.querySelectorAll('[id^="yk_name_"]').forEach(input => {
+		let currentName = input.value;
+		if (currentLanguage === "ko") {
+			for (let eng in ykNamesKo) {
+				if (eng === currentName) {
+					input.value = ykNamesKo[eng];
+					break;
+				}
+			}
+		} else {
+			for (let eng in ykNamesKo) {
+				if (ykNamesKo[eng] === currentName) {
+					input.value = eng;
+					break;
+				}
+			}
+		}
+	});
+	
+	document.querySelectorAll('label').forEach(label => {
+		if (label.textContent.includes("Popularity")) {
+			label.textContent = currentLanguage === "ko" ? "인기 기술" : "Popularity skill";
+		} else if (label.textContent.includes("Unpopularity")) {
+			label.textContent = currentLanguage === "ko" ? "비인기 기술" : "Unpopularity skill";
+		} else if (label.textContent.includes("No heart")) {
+			label.textContent = currentLanguage === "ko" ? "심장 위스프 없음" : "No heart wisp";
+		} else if (label.textContent.includes("Blue heart")) {
+			label.textContent = currentLanguage === "ko" ? "파란 심장 위스프" : "Blue heart wisp";
+		} else if (label.textContent.includes("Golden heart")) {
+			label.textContent = currentLanguage === "ko" ? "금빛 심장 위스프" : "Golden heart wisp";
+		}
+	});
+	
+	document.querySelectorAll('th').forEach(th => {
+		if (th.textContent.includes("Yo-kai Name")) {
+			th.textContent = currentLanguage === "ko" ? "요괴 이름 / 동료 횟수" : "Yo-kai Name / Befriend Count";
+		}
+	});
+}
 
 
 const foodBonus = [

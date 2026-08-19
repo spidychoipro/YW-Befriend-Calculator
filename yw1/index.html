@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Yo-kai Watch 1 Befriend Calculator</title>
+	<title>요괴워치 1 동료 확률 계산기</title>
 <style>
 input {
 	padding: 10px;
@@ -17,37 +17,37 @@ table, th, td {
 
 
 <body>
-	<h1>Yo-kai Watch 1 Befriend Calculator</h1>
+	<h1>요괴워치 1 동료 확률 계산기</h1>
 	<button onclick="toggleAdvanced()" id="advBtn"></button>
-	<h3>Global Bonuses</h3>
+	<h3>전역 보너스</h3>
 	<table>
 		<tr>
 			<td>
 				<input type="checkbox" id="pop" onclick="calculate()" />
-				<label for="pop">Popularity skill</label>
+				<label for="pop">인기 기술</label>
 				<br />
 				<input type="checkbox" id="unpop" onclick="calculate()" />
-				<label for="unpop">Unpopularity skill</label>
+				<label for="unpop">비인기 기술</label>
 				<br />
 			</td>
 			<td>
 				<input id="whisp_0" type="radio" name="whisp_%I" value="whisp_0" onclick="calculate()" checked />
-				<label for="whisp_0">No heart wisp</label>
+				<label for="whisp_0">심장 위스프 없음</label>
 				<br />
 				<input id="whisp_1" type="radio" name="whisp_%I" value="whisp_1" onclick="calculate()" />
-				<label for="whisp_1">Blue heart wisp</label>
+				<label for="whisp_1">파란 심장 위스프</label>
 				<br />
 				<input id="whisp_2" type="radio" name="whisp_%I" value="whisp_2" onclick="calculate()" />
-				<label for="whisp_2">Golden heart wisp</label>
+				<label for="whisp_2">금빛 심장 위스프</label>
 			</td>
 		</tr>
 
 	</table>
-	<p>Enter your Yo-kai name with how often you already befriended it:</p>
+	<p>요괴 이름과 이미 동료로 만든 횟수를 입력하세요:</p>
 
 	<div id="data"></div>
 
-	<h2>Probabilities</h2>
+	<h2>확률</h2>
 	<ul id="result"></ul>
 
 	<script src="build.js"></script>
