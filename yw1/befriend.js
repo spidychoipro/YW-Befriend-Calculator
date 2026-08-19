@@ -440,6 +440,23 @@ let ykNamesKo = {
 "Skelebella": "스켈레벨라",
 };
 
+let ykNamesEn = {};
+for (let eng in ykNamesKo) {
+	ykNamesKo[eng] = eng;
+	ykNamesEn[ykNamesKo[eng]] = eng;
+}
+
+function getYoKaiName(name) {
+	if (name in ykData) return name;
+	if (name in ykNamesEn) return ykNamesEn[name];
+	return name;
+}
+
+function getYoKaiNameKo(name) {
+	if (name in ykNamesKo) return ykNamesKo[name];
+	return name;
+}
+
 let dataList = document.createElement("datalist");
 dataList.id = "yks";
 
@@ -530,12 +547,13 @@ function calcDiff(id) {
 	let befCountText = document.getElementById("yk_count_" + id);
 	let ykName = document.getElementById("yk_name_" + id).value;
 	let ykCount = parseInt(befCountText.value);
-	if (isNaN(ykCount) || ykCount > 5 || !(ykName in ykData)) {
+	let engName = getYoKaiName(ykName);
+	if (isNaN(ykCount) || ykCount > 5 || !(engName in ykData)) {
 		befIdText.value = "0";
-		alert("To calculate difficulty first enter the name of the yokai and how often you already befriended it.\nIf you already have 6 befriended your befriend chance becomes 0%");
+		alert("요괴 이름을 입력하고 동료로 만든 횟수를 입력하세요.\n이미 6번 동료로 만들면 확률이 0%가 됩니다.");
 		return;
 	}
-	let befriendId = ykData[ykName][ykCount];
+	let befriendId = ykData[engName][ykCount];
 	befIdText.value = befriendId;
 
 	calculate();
@@ -553,17 +571,18 @@ function calcChance(id, updateBefId, setCount) {
 	let befriendId = parseInt(befIdText.value);
 
 	let ykName = document.getElementById("yk_name_" + id).value;
+	let engName = getYoKaiName(ykName);
 	if (updateBefId) {
 		let ykCount = parseInt(befCountText.value);
 		if (isNaN(ykCount)) {
 			ykCount = 0;
 			if (setCount) befCountText.value = "0";
 		}
-		if (ykCount > 5 || !(ykName in ykData)) {
+		if (ykCount > 5 || !(engName in ykData)) {
 			befIdText.value = "0";
 			return [ykName, 0, 0];
 		}
-		befriendId = ykData[ykName][ykCount];
+		befriendId = ykData[engName][ykCount];
 		befIdText.value = befriendId;
 	}
 
@@ -584,7 +603,7 @@ function calcChance(id, updateBefId, setCount) {
 
 	if (chance > 100.0) chance = 100.0;
 
-	return [ykName, ykName in ykData ? ykData[ykName][0] : befriendId, chance/100];
+	return [ykName, engName in ykData ? ykData[engName][0] : befriendId, chance/100];
 
 }
 
@@ -593,7 +612,7 @@ function calculate(updateBefId = false, setCount = false) {
 	for (let i = 1;i <= 3;i++) {
 		let data = calcChance(i, updateBefId, setCount);
 		let chance = data[2];
-		document.getElementById(`result_${i}`).innerHTML = `Partial Probability: ${(chance*100).toFixed(2)}%`;
+		document.getElementById(`result_${i}`).innerHTML = `부분 확률: ${(chance*100).toFixed(2)}%`;
 		if (chance > 0) {
 			list.push(data);
 		}
@@ -664,7 +683,7 @@ function setProbabilities(dict) {
 		result.append(h);
 	}
 	let h = document.createElement("li");
-	h.innerHTML = `No Yo-kai: ${(100 - sum).toFixed(2)}%`;
+	h.innerHTML = `요괴 없음: ${(100 - sum).toFixed(2)}%`;
 	result.append(h);
 
 
