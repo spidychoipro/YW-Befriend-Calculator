@@ -442,7 +442,6 @@ let ykNamesKo = {
 
 let ykNamesEn = {};
 for (let eng in ykNamesKo) {
-	ykNamesKo[eng] = eng;
 	ykNamesEn[ykNamesKo[eng]] = eng;
 }
 
@@ -466,26 +465,28 @@ for (let yk in ykData) {
 	option.text = yk;
 	dataList.append(option);
 	
-	let koOption = document.createElement("option");
-	koOption.value = ykNamesKo[yk] || yk;
-	koOption.text = ykNamesKo[yk] || yk;
-	dataList.append(koOption);
+	let koName = ykNamesKo[yk];
+	if (koName) {
+		let koOption = document.createElement("option");
+		koOption.value = koName;
+		koOption.text = koName;
+		dataList.append(koOption);
+	}
 }
 
 document.body.append(dataList);
 
 let languageToggle = document.createElement("button");
-languageToggle.textContent = "한국어";
+languageToggle.textContent = "한국어 이름으로 전환";
 languageToggle.onclick = function() {
-	this.textContent = this.textContent === "한국어" ? "English" : "한국어";
 	updateLanguage();
 };
 document.body.insertBefore(languageToggle, document.getElementById("data"));
 
-let currentLanguage = "en";
+let currentLanguage = "ko";
 
 function updateLanguage() {
-	currentLanguage = currentLanguage === "en" ? "ko" : "en";
+	currentLanguage = currentLanguage === "ko" ? "en" : "ko";
 	
 	document.querySelectorAll('[id^="yk_name_"]').forEach(input => {
 		let currentName = input.value;
@@ -503,26 +504,6 @@ function updateLanguage() {
 					break;
 				}
 			}
-		}
-	});
-	
-	document.querySelectorAll('label').forEach(label => {
-		if (label.textContent.includes("Popularity")) {
-			label.textContent = currentLanguage === "ko" ? "인기 기술" : "Popularity skill";
-		} else if (label.textContent.includes("Unpopularity")) {
-			label.textContent = currentLanguage === "ko" ? "비인기 기술" : "Unpopularity skill";
-		} else if (label.textContent.includes("No heart")) {
-			label.textContent = currentLanguage === "ko" ? "심장 위스프 없음" : "No heart wisp";
-		} else if (label.textContent.includes("Blue heart")) {
-			label.textContent = currentLanguage === "ko" ? "파란 심장 위스프" : "Blue heart wisp";
-		} else if (label.textContent.includes("Golden heart")) {
-			label.textContent = currentLanguage === "ko" ? "금빛 심장 위스프" : "Golden heart wisp";
-		}
-	});
-	
-	document.querySelectorAll('th').forEach(th => {
-		if (th.textContent.includes("Yo-kai Name")) {
-			th.textContent = currentLanguage === "ko" ? "요괴 이름 / 동료 횟수" : "Yo-kai Name / Befriend Count";
 		}
 	});
 }
